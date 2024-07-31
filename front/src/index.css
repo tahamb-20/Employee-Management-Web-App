@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	position: relative;
+	overflow-y: hidden;
+}
+
+body::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("./assets/images/bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	filter: brightness(0.7);
+	z-index: -1;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 6px;
+}
+::-webkit-scrollbar * {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: #f59e0b !important;
+	border-radius: 5px;
+}
+.file-input {
+    height: 3rem;
+    flex-shrink: 1;
+    padding-inline-end: 1rem;
+    font-size: 1rem;
+    line-height: 2;
+    line-height: 1.5rem;
+    overflow: hidden;
+    border-radius: var(--rounded-btn, 0.5rem);
+    border-width: 1px;
+    border-color: var(--fallback-bc, oklch(var(--bc) / var(--tw-border-opacity)));
+    --tw-border-opacity: 0;
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
+}
+.pagination {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+  }
+  
+  .pagination li {
+	display: inline-block;
+	margin: 0 2px;
+	cursor: pointer;
+  }
+  
+  .pagination li a {
+	color: #333;
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+  }
+  
+  .pagination li.active a {
+	background-color: #007bff;
+	color: #fff;
+  }
+  
+  .pagination li.disabled a {
+	pointer-events: none;
+	color: #999;
+  }
